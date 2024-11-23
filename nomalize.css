@@ -1,7 +1,7 @@
 @import 'node_modules/modern-normalize/modern-normalize.css';
 
 :root {
-  line-height: 1.5;
+  line-height: calc(1em + 0.5rem);
 }
 
 h1, h2, h3, h4, h5, figure, p, ol, ul {
@@ -18,7 +18,29 @@ h1, h2, h3, h4, h5 {
   font-weight: inherit;
 }
 
-img {
+img, picture, video, canvas, svg {
   display: block;
-  max-inline-size: 100%;
+  max-width: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+#root, #__next {
+  isolation: isolate;
 }
